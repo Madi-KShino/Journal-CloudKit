@@ -15,6 +15,7 @@
 		53D0C49F22D3D66A00D42E5A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D0C49E22D3D66A00D42E5A /* CloudKit.framework */; };
 		53D0C4A622D3D6D500D42E5A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C4A522D3D6D500D42E5A /* Entry.swift */; };
 		53D0C4A822D3DF4900D42E5A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C4A722D3DF4900D42E5A /* EntryController.swift */; };
+		53D0C4AA22D3DF6F00D42E5A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C4A922D3DF6F00D42E5A /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		53D0C49E22D3D66A00D42E5A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		53D0C4A522D3D6D500D42E5A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		53D0C4A722D3DF4900D42E5A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		53D0C4A922D3DF6F00D42E5A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		53D0C4A222D3D6A100D42E5A /* Helpers+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				53D0C4A922D3DF6F00D42E5A /* DateExtension.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D0C4A622D3D6D500D42E5A /* Entry.swift in Sources */,
+				53D0C4AA22D3DF6F00D42E5A /* DateExtension.swift in Sources */,
 				53D0C48C22D3D61600D42E5A /* ViewController.swift in Sources */,
 				53D0C4A822D3DF4900D42E5A /* EntryController.swift in Sources */,
 				53D0C48A22D3D61600D42E5A /* AppDelegate.swift in Sources */,
