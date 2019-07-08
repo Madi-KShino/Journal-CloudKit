@@ -11,6 +11,8 @@ import CloudKit
 
 class EntryController {
     
+    static let sharedInstance = EntryController()
+    
     var entries: [Entry] = []
     
     func save(entry: Entry, completion: @escaping (Bool) -> ()) {
@@ -50,4 +52,10 @@ class EntryController {
         }
     }
     
+    func updateEntry(entry: Entry, title: String, body: String, completion: @escaping (Bool) -> Void) {
+        let opetation = CKModifyRecordsOperation()
+        opetation.savePolicy = .changedKeys
+        
+        
+    }
 }
