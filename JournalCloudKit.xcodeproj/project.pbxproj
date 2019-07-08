@@ -14,6 +14,7 @@
 		53D0C49422D3D61700D42E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D0C49222D3D61700D42E5A /* LaunchScreen.storyboard */; };
 		53D0C49F22D3D66A00D42E5A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D0C49E22D3D66A00D42E5A /* CloudKit.framework */; };
 		53D0C4A622D3D6D500D42E5A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C4A522D3D6D500D42E5A /* Entry.swift */; };
+		53D0C4A822D3DF4900D42E5A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C4A722D3DF4900D42E5A /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		53D0C49C22D3D66300D42E5A /* JournalCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalCloudKit.entitlements; sourceTree = "<group>"; };
 		53D0C49E22D3D66A00D42E5A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		53D0C4A522D3D6D500D42E5A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		53D0C4A722D3DF4900D42E5A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		53D0C4A122D3D69100D42E5A /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				53D0C4A722D3DF4900D42E5A /* EntryController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				53D0C4A622D3D6D500D42E5A /* Entry.swift in Sources */,
 				53D0C48C22D3D61600D42E5A /* ViewController.swift in Sources */,
+				53D0C4A822D3DF4900D42E5A /* EntryController.swift in Sources */,
 				53D0C48A22D3D61600D42E5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
