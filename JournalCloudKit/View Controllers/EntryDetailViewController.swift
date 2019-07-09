@@ -34,7 +34,9 @@ class EntryDetailViewController: UIViewController {
         guard let title = titleTextField.text, title != "",
             let body = bodyTextField.text, body != "" else { return }
         if entry != nil {
-            //update
+            guard let entry = entry else { return }
+            EntryController.sharedInstance.updateEntry(entry: entry, title: title, body: body)
+            self.navigationController?.popViewController(animated: true)
         } else {
             EntryController.sharedInstance.addEntryWith(title: title, bodyText: body) { (true) in
                 DispatchQueue.main.async {

@@ -52,10 +52,30 @@ class EntryController {
         }
     }
     
-    func updateEntry(entry: Entry, title: String, body: String, completion: @escaping (Bool) -> Void) {
-        let opetation = CKModifyRecordsOperation()
-        opetation.savePolicy = .changedKeys
+    func updateEntry(entry: Entry, title: String, body: String) {
+        let title = entry.title
+        let body = entry.bodyText
         
-        
+        let database = CKContainer.default().privateCloudDatabase
+        database.fetch(withRecordID: entry.cloudKitRecordID) { (record, error) in
+            if let recordToSave = record {
+                recordToSave.setObject(title as __CKRecordObjCValue, forKey: "title")
+                recordToSave.setObject(body as __CKRecordObjCValue, forKey: "body")
+                
+                let operation = CKModifyRecordsOperation(recordsToSave: [recordToSave], recordIDsToDelete: nil)
+                operation.savePolicy = CKModifyRecordsOperation.RecordSavePolicy.allKeys
+                operation.qualityOfService = QualityOfService.userInitiated
+                operation.modifyRecordsCompletionBlock = { savedRecords, deletedRecordIDs, error in
+                    if error == nil {
+                        print("Entry Updated")
+                    } else {
+                        print(error as Any)
+                    }
+                }
+                database.add(operation)
+            } else {
+                print(error.debugDescription)
+            }
+        }
     }
 }
